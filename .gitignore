@@ -1,0 +1,56 @@
+# Composer
+.composer
+vendor/*
+!*/vendor/*
+
+# Sass
+.sass-cache
+
+# Grav Specific
+/system
+backup/*
+!backup/.*
+cache/*
+!cache/.*
+logs/*
+!logs/.*
+images/*
+!images/.*
+user/data/*
+!user/data/.*
+user/localhost/config/security.yaml
+user/config/security.yaml
+user/themes/antimatter
+user/themes/quark
+/webserver-configs
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
+# phpstorm
+.idea/*
+user/config/security.yaml
+
+tests/_output/*
+tests/_support/_generated/*
+tests/cache/*
+tests/error.log
+
+# Dependency directories
+node_modules
+.npm
+jspm_packages
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+### custom to website ###
+user/gravblog.local/config/security.yaml
+user/gravblog.local/config/system.yaml

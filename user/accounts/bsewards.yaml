@@ -1,0 +1,11 @@
+state: enabled
+email: bensewards@outlook.com
+fullname: 'Benjamin Sewards'
+title: 'Lead Developer'
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$IPVZMYuexpjSBO3whAbUo.qxL3YBRpoxHz1jPLW95DEFFtt.YPYCa
