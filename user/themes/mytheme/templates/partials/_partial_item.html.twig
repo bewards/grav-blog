@@ -1,0 +1,46 @@
+<div class="item-content text-{{ theme_config.item.text_align }}">
+    {{ page.content }}
+</div>
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
+	<div class="btn-group">
+		{% for button in page.header.buttons %}
+			<a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}"
+			class="btn {{ 'btn-outline-' ~ page.header.style|defined('dark') }}">
+				{% if button.icon %}
+				<i class="fas fa-{{ button.icon }}"></i>
+				{% endif %}
+				{{ button.text }}
+			</a>
+		{% endfor %}
+	</div>
+</div>
+
+{% if config.plugins.sharer.enabled %}
+	{{ sharer() }}
+{% endif %}
+
+{% if theme_config.item.show_prev_next %}
+	<div class="d-flex flex-row py-3 mt-3">
+		{% if not page.isLast %}
+			<a class="btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}" href="{{ page.prevSibling.url }}">
+			<i class="fas fa-chevron-left"></i> {{ 'BOOTSTRAP_BLOG.ITEM.PREVIOUS'|t }}</a>
+		{% endif %}
+		{% if not page.isFirst %}
+			<a class="ml-auto btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}"
+			href="{{ page.nextSibling.url }}">{{ 'BOOTSTRAP_BLOG.ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
+		{% endif %}
+	</div>
+{% endif %}
+
+{% if config.plugins.relatedpages.enabled and theme_config.item.related_pages and related_pages|length > 0 %}
+    <div class="relatedpages row">
+        {% include 'partials/item_relatedpages.html.twig' with related_pages %}
+    </div>
+{% endif %}
+
+{% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
+{% if comments.enabled %}
+<div class="comments">
+	{% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}
+</div>
+{% endif %}

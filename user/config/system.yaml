@@ -24,7 +24,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: bootstrap-blog
+  theme: mytheme
   order:
     by: default
     dir: asc

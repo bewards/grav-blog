@@ -1,0 +1,23 @@
+$colors: map-merge(
+    (
+    // triad set
+    "steelblue": #4682b4,
+    "magenta": #b44682,
+    "lime": #82b446,
+
+    // analogous to steelblue
+    "purple": #464bb4,
+    "cyan": #46b4af,
+
+    // complementary to steelblue
+    "dullorange": #b47846,
+    "softred": #CF8E7F,
+    "paleblue": #A4C4DE,
+    "greenyellow": #ADB446,
+
+    // monochromatic to steelblue
+    "steelblue-offwhite": #ecf2f7,
+    "steelblue-dark": #0e1a24,
+    
+    ), $colors
+);
