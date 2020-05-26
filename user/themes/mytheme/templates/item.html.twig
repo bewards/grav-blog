@@ -10,33 +10,44 @@
 
 <main id="post">
 
-    <header class="header-post bg-steelblue-dark">
+    <article>
+        <header class="header-post bg-steelblue-dark">
 
-        {% if config.plugins.breadcrumbs.enabled %}
-        {% include 'partials/breadcrumbs.html.twig' %}
-        {% endif %}
-
-        <div class="header-post-inside">
-            {% include 'partials/_header-post.html.twig' with { 'parent': page.parent } %}
-        </div>
-
-    </header>
-
-    <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
-
-        <div class="row">
-            <div id="item" class="item col-12 {{ item_columns }}">
-                {% include 'partials/_partial_item.html.twig' with {'parent':page.parent, 'truncate':false} %}
+            {% if config.plugins.breadcrumbs.enabled %}
+            <div class="container">
+                {% include 'partials/breadcrumbs.html.twig' %}
             </div>
-            {% if sidebar %}
-            <aside id="sidebar" class="col-12 col-md-4{% if theme_config.sidebar.align == 'left' %} order-md-first{% endif %}">
-                <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
-                    {% include 'partials/sidebar.html.twig' with { 'blog':page.parent } %}
-                </div>
-            </aside>
             {% endif %}
+
+            <div class="header-post-inside container">
+                {% include 'partials/_header-post.html.twig' with { 'parent': page.parent } %}
+            </div>
+
+        </header>
+        <div class="header-gradient-after">
+            <div class="header-gradient-content">
+                <div class="header-gradient-content-inside container">
+                    <p>Header Bottom Highlight Sample Text</p>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="container page-content py-5">
+
+            <div class="row">
+                <div id="item" class="item col-12 {{ item_columns }}">
+                    {% include 'partials/_partial_item.html.twig' with {'parent':page.parent, 'truncate':false} %}
+                </div>
+                {% if sidebar %}
+                <aside id="sidebar" class="col-12 col-md-4{% if theme_config.sidebar.align == 'left' %} order-md-first{% endif %}">
+                    <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
+                        {% include 'partials/sidebar.html.twig' with { 'blog':page.parent } %}
+                    </div>
+                </aside>
+                {% endif %}
+            </div>
+        </div>
+    </article>
 
 </main>
 {% endblock %}

@@ -1,5 +1,5 @@
 en:
-    BOOTSTRAP_BLOG:
+    MYTHEME:
         ADMIN:
             THEME_OPTIONS: Theme options
             ENABLE: Enable
@@ -159,6 +159,8 @@ en:
             READ_MORE: Read more
             CAROUSEL_NEXT: Next
             CAROUSEL_PREVIOUS: Previous
+        POST:
+            PUBLISHED_ON: Published On
         SIMPLESEARCH:
             SEARCH_RESULTS: Search Results
         SIDEBAR:
@@ -187,7 +189,7 @@ en:
         RETURN_TOP_PAGE: Return to the top page
 
 es:
-    BOOTSTRAP_BLOG:
+    MYTHEME:
         ADMIN:
             ENABLE: Activar
             TITLE: Título

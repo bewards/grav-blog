@@ -23,11 +23,11 @@
 	<div class="d-flex flex-row py-3 mt-3">
 		{% if not page.isLast %}
 			<a class="btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}" href="{{ page.prevSibling.url }}">
-			<i class="fas fa-chevron-left"></i> {{ 'BOOTSTRAP_BLOG.ITEM.PREVIOUS'|t }}</a>
+			<i class="fas fa-chevron-left"></i> {{ 'MYTHEME.ITEM.PREVIOUS'|t }}</a>
 		{% endif %}
 		{% if not page.isFirst %}
 			<a class="ml-auto btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}"
-			href="{{ page.nextSibling.url }}">{{ 'BOOTSTRAP_BLOG.ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
+			href="{{ page.nextSibling.url }}">{{ 'MYTHEME.ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
 		{% endif %}
 	</div>
 {% endif %}

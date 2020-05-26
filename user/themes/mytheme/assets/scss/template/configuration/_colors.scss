@@ -1,5 +1,4 @@
-$colors: map-merge(
-    (
+$colors: (
     // triad set
     "steelblue": #4682b4,
     "magenta": #b44682,
@@ -18,6 +17,9 @@ $colors: map-merge(
     // monochromatic to steelblue
     "steelblue-offwhite": #ecf2f7,
     "steelblue-dark": #0e1a24,
-    
-    ), $colors
+);
+
+$steelblue-dark: map-get($colors, "steelblue-dark");
+$theme-colors: (
+  dark: $steelblue-dark
 );

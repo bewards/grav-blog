@@ -1,0 +1,33 @@
+a {
+
+    // all links besides ones styled like buttons
+    &:not(.button) {
+        &:hover {
+            background: linear-gradient(90deg, color("lime"), color("magenta"));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            text-shadow: none;
+        }
+    }
+
+    // links within an article
+    article & {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+h2 {
+    article & {
+        margin-top: 1.5rem;
+        
+        @include media-breakpoint-up(md) {
+            margin-top: 2rem;
+        }
+    }
+}

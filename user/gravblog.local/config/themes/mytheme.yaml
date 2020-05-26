@@ -6,7 +6,7 @@ favicon: null
 navbar:
   image: null
   icon: null
-  style: light
+  style: dark
   override_page_style: true
   dropdown: true
   sticky: false

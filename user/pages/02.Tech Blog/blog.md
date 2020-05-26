@@ -3,8 +3,8 @@ title: 'Tech Blog'
 slug: tech-blog
 sidebar:
     enabled: true
-style: dark
 layout: cards
+style: dark
 content:
     items: '@self.children'
     order:

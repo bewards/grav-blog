@@ -10,13 +10,13 @@ form:
             fields:
                 mytheme:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.MODULAR.CALLOUT
+                    title: MYTHEME.ADMIN.MODULAR.CALLOUT
                     fields:
                         header.style:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.STYLE
-                            help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
-                            description: BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
+                            label: MYTHEME.ADMIN.STYLE
+                            help: MYTHEME.ADMIN.STYLE_HELP
+                            description: MYTHEME.ADMIN.WE_USE_BOOTSTRAP_COLORS
                             size: medium
                             toggleable: true
                             options:
@@ -40,43 +40,43 @@ form:
                                 cyan: Cyan
                         header.text_align:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.TEXT_ALIGN
+                            label: MYTHEME.ADMIN.TEXT_ALIGN
                             classes: fancy
                             default: boxed
                             options:
-                                left: BOOTSTRAP_BLOG.ADMIN.LEFT
-                                right: BOOTSTRAP_BLOG.ADMIN.RIGHT
-                                center: BOOTSTRAP_BLOG.ADMIN.CENTER
-                                justify: BOOTSTRAP_BLOG.ADMIN.JUSTIFY
+                                left: MYTHEME.ADMIN.LEFT
+                                right: MYTHEME.ADMIN.RIGHT
+                                center: MYTHEME.ADMIN.CENTER
+                                justify: MYTHEME.ADMIN.JUSTIFY
                             validate:
                                 pattern: (left|right|center|justify)
                         header_image:
                             type: section
-                            title: BOOTSTRAP_BLOG.ADMIN.ITEM.HEADER_IMAGE
+                            title: MYTHEME.ADMIN.ITEM.HEADER_IMAGE
                             underline: true
                             fields:
                                 header.image_file:
                                     type: pagemediaselect
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                                    label: MYTHEME.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                                    help: MYTHEME.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                                     toggleable: true
                                     multiple: false
                                 header.image_align:
                                     type: select
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.IMAGE_ALIGN
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.IMAGE_ALIGN_HELP
+                                    label: MYTHEME.ADMIN.ITEM.IMAGE_ALIGN
+                                    help: MYTHEME.ADMIN.ITEM.IMAGE_ALIGN_HELP
                                     size: medium
                                     default: left
                                     options:
-                                        left: BOOTSTRAP_BLOG.ADMIN.LEFT
-                                        right: BOOTSTRAP_BLOG.ADMIN.RIGHT
+                                        left: MYTHEME.ADMIN.LEFT
+                                        right: MYTHEME.ADMIN.RIGHT
                                     validate:
                                         pattern: (left|right|center)
                                 header.image_size:
                                     type: text
                                     size: x-small
-                                    label: BOOTSTRAP_BLOG.ADMIN.MODULAR.TEXT_IMAGE_SIZE
-                                    help: BOOTSTRAP_BLOG.ADMIN.MODULAR.TEXT_IMAGE_SIZE_HELP
+                                    label: MYTHEME.ADMIN.MODULAR.TEXT_IMAGE_SIZE
+                                    help: MYTHEME.ADMIN.MODULAR.TEXT_IMAGE_SIZE_HELP
                                     placeholder: 1-12
                                     validate:
                                         type: number
