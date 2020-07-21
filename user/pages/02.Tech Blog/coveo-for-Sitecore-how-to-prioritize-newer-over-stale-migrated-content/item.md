@@ -52,7 +52,8 @@ For our ranking function, we decided that we want a sliding scale of boosting to
 The ranking function should be added directly with JavaScript within the `buildingQuery` event listener of a Coveo Search Interface:
 
 ``` JavaScript
-args.queryBuilder.advancedExpression.add("$qrf(expression: 'max(@contentdate, (NOW - (YEAR * 8)))', normalizeWeight: 'true', modifier: '500')");
+args.queryBuilder.advancedExpression
+	.add("$qrf(expression: 'max(@contentdate, (NOW - (YEAR * 8)))', normalizeWeight: 'true', modifier: '500')");
 ```
 
 ## The Result
